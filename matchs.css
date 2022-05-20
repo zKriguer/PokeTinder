@@ -10,6 +10,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 }
 #namelist img{
     width: 150px;
@@ -28,6 +29,7 @@ body{
     position: relative;
     max-width: 500px;
     width: 80%;
+    margin-bottom: 20px;
 }
 .matchs-content p {
     transform: translateY(10px);
