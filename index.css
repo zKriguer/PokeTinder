@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;500&display=swap');
+
+
+body{
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--light-periwinkle);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 2px 0px;
+    display: grid;
+    place-items: center;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: var(--blue-jeans);
+    width: 80%;
+    border-radius: 15px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}  
+.img-container{
+    display: flex;
+    width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 60%;
+}
+.description{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.stats{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 8%;
+}
+.description h1{
+    display: flex;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1px 0px;
+    color: white;
+}
+.about h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+.about p{
+    margin-left: 10%;
+    font-size: 15px;
+    color: grey;
+    margin-bottom: 30px;
+    font-weight: bold;
+    line-height: 3px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    font-size: 80px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 28px 5px;
+}
+.buttons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.heart{
+    width: 90px;
+    height: 90px;
+    background: var(--forest-green-crayola);
+    padding: 1px;
+    border-radius: 500px;
+
+}
+.heart svg{
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: white;
+}
+.close{
+    width: 60px;
+    height: 60px;
+    background: rgb(33,0,36);
+    background:rgb(255, 255, 255);
+    padding: 1px;
+    border-radius: 500px;
+    text-align: center;
+}
+.close svg{
+    display: flex;
+    width: 20px;
+    fill: rgb(255, 98, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close img{
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background-color: var(--radical-red);
+    margin: 0% 1%;
+    border-radius: 25px;
+    border: 10px groove rgb(83, 83, 83);
+    max-width: 347px;
+}
+
+.fadeout{
+    animation: match .5s ease-in-out 0s 1 forwards;
+}
+
+.fadein{
+    animation: unmatch .5s ease-in-out 0s 1 forwards;
+}
+
+@keyframes match{
+    0%{
+        background-color: aquamarine;
+    }
+    100%{
+        transform-origin: top;
+        transform: rotateZ(60deg) translateX(-120%);
+        opacity: 0;
+    };
+}
+
+@keyframes unmatch{
+    0%{
+        background-color: rgb(129, 32, 23);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotateZ(-60deg) translateX(120%);
+        opacity: 0;
+    };
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 147px;
+    place-items: left;
+}
+
+.grid p{
+    display: inline-block;
+    width: fit-content;
+    margin: 15px 0;
+    color: rgb(255, 255, 255);
+}
+.grid .statname{
+    color: rgb(255, 196, 0);
+}
+
+.close .fav{
+    fill: purple;
+}
+
+.animate-match{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 90%;
+}
+.animate-heart{
+    position: absolute;
+    display: none;
+    width: 80%;
+    max-width: 331px ;
+    align-items: center;
+    justify-content: center;
+    animation: like 0.5s 1 0s ease-in-out forwards;
+    fill: rgb(193, 83, 83);
+}
+
+.animate-x{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 40%;
+    max-width: 331px;
+    align-items: center;
+    justify-content: center;
+    animation: like 0.5s 1 0s ease-in-out forwards;
+    fill: rgb(193, 83, 83);
+}
+@keyframes like{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
