@@ -1,5 +1,3 @@
-
-
 (async function () {
     pickRandom()
     function animateMatch(){
